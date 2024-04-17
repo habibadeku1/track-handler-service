@@ -8,7 +8,7 @@
   "scripts": {
     "build": "nest build",
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
-    "start": "node --max-old-space-size=4096 dist/main",
+    "start": "node --max-old-space-size=4096 node_modules/@nestjs/cli/bin/nest.js start --watch",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
@@ -27,11 +27,8 @@
     "@nestjs/platform-express": "^10.0.0",
     "@types/fluent-ffmpeg": "^2.1.24",
     "aws-sdk": "^2.1589.0",
-    "ffmpeg-static": "^5.2.0",
     "fluent-ffmpeg": "^2.1.2",
-    "music-tempo": "^1.0.3",
     "mysql": "^2.18.1",
-    "node-wav": "^0.0.2",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
