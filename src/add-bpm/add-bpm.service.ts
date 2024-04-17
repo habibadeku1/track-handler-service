@@ -32,7 +32,7 @@ export class AddBpmService {
       const decoded = wav.decode(buffer);
       if (decoded.sampleRate !== 44100)
         throw new Error('Sample rate must be 44100 Hz');
-      const mt = new musicTempo(decoded.channelData[0]);
+      const mt = new musicTempo(decoded.channelData[0], { expiryTime: 30 });
       console.log('BPM:', mt.tempo);
       return mt.tempo;
     } catch (error) {
