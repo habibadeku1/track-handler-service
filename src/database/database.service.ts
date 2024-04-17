@@ -17,6 +17,14 @@ export class DatabaseService implements OnModuleInit, OnModuleDestroy {
       database: this.configService.get<string>('DATABASE_NAME'),
     });
 
+    console.log({
+      host: this.configService.get('DATABASE_HOST'),
+      port: parseInt(this.configService.get('DATABASE_PORT')),
+      user: this.configService.get('DATABASE_USER'),
+      password: this.configService.get('DATABASE_PASSWORD'),
+      database: this.configService.get<string>('DATABASE_NAME'),
+    });
+
     this.connection.connect((error) => {
       if (error) throw error;
       console.log('Successfully connected to the database.');
